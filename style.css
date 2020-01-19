@@ -6,8 +6,15 @@ ul {
   padding: 10 0 0 10;
 }
 
-img {max-height: auto; max-width: 500px;}
+.parent {
+  width: 100px;
+}
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* DROPDOWN MENU */
 
@@ -62,16 +69,17 @@ img {max-height: auto; max-width: 500px;}
 
   display: grid;
 
-  grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+  grid-template-columns: auto auto auto;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 20px 10px 0px;
 
 
 }
 
 .item {
-  padding: 20px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
+  margin: 10px 10px 10px 10px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +98,16 @@ color:#f1f1f1;
 /* looks good on Safari but a little off in Chrome */
 
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
+    
+    .container {
+
+
+  grid-template-columns: auto;
+
+
+
+}
 
 img {
 
